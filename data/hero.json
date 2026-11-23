@@ -1,0 +1,51 @@
+{
+  "name": "Sushila Dawadi",
+  "title": "Data Analyst: SQL, BI Dashboards & KPI Reporting",
+  "summary": "Data Analyst with 3+ years of experience analyzing business and operational data across banking, financial services and insurance. I use SQL, Excel, Power BI, Tableau and R for KPI reporting, dashboards and reconciliation.",
+  "location": "New Hill, NC",
+  "photo": {
+    "src": "assets/images/sushila-dawadi.jpg",
+    "alt": "Portrait of Sushila Dawadi"
+  },
+  "readouts": [
+    {
+      "value": "175K+",
+      "label": "records analyzed at Northern Trust"
+    },
+    {
+      "value": "12+",
+      "label": "KPIs on dashboards at PNC"
+    },
+    {
+      "value": "28%",
+      "label": "less manual reporting effort at PNC"
+    },
+    {
+      "value": "21%",
+      "label": "fewer recurring data discrepancies at PNC"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "View projects",
+      "href": "#projects",
+      "kind": "primary"
+    },
+    {
+      "label": "Resume",
+      "href": "assets/files/sushila-dawadi-resume.pdf",
+      "kind": "resume"
+    },
+    {
+      "label": "Get in touch",
+      "href": "#contact",
+      "kind": "secondary"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/swiskriti-art",
+    "linkedin": "https://www.linkedin.com/in/sushila-dawadi-6538851ab/",
+    "email": "swiskriti@gmail.com",
+    "phone": "919 400 1945"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "name": "Data Analysis",
+      "items": [
+        "Exploratory Data Analysis",
+        "Trend Analysis",
+        "Variance Analysis",
+        "Root Cause Analysis",
+        "KPI Analysis"
+      ]
+    },
+    {
+      "name": "SQL",
+      "items": [
+        "Joins",
+        "CTEs",
+        "Subqueries",
+        "Aggregations",
+        "Window Functions",
+        "Data Reconciliation"
+      ]
+    },
+    {
+      "name": "Business Intelligence",
+      "items": [
+        "Power BI",
+        "Tableau",
+        "Dashboard Development",
+        "KPI Reporting",
+        "Data Visualization"
+      ]
+    },
+    {
+      "name": "Programming & Statistics",
+      "items": [
+        "R",
+        "tidymodels",
+        "Logistic Regression",
+        "Statistical Modeling",
+        "Data Manipulation"
+      ]
+    },
+    {
+      "name": "Microsoft Excel",
+      "items": [
+        "Data Cleaning",
+        "Data Validation",
+        "Reconciliation",
+        "Reporting Automation",
+        "Spreadsheet Analysis"
+      ]
+    },
+    {
+      "name": "Business & Data Quality",
+      "items": [
+        "Data Profiling",
+        "Quality Checks",
+        "Exception Investigation",
+        "Requirements Gathering",
+        "KPI Definition",
+        "Stakeholder Collaboration"
+      ]
+    }
+  ]
+}

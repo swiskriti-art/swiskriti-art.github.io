@@ -1,0 +1,323 @@
+/* Amber Terminal in print: ink on paper, with the panel's hardware (rails, screws, lamps, scope
+   traces, the beam) left off. Loaded with media="print". A printed page is under 760px wide, so
+   the one-column screen layouts apply; this sheet resets only what paper needs. */
+@page {
+  margin: 14mm 14mm 16mm;
+}
+
+* {
+  background: transparent !important;
+  color: #000000 !important;
+  border-color: #b8b8b8 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+  transition: none !important;
+  /* lines the boot never reached still print */
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html,
+body {
+  background: #ffffff !important;
+}
+
+body {
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+
+.bar,
+.skip-link,
+.menu-btn,
+.base-top,
+.lamp,
+.status-lamps,
+.mod-scale,
+.scope--trace,
+.scope-trace,
+.tx-ctas,
+.kit-cta,
+.row-no {
+  display: none !important;
+}
+
+.panel::before,
+.unit::before,
+.rack::before,
+.rack::after,
+.screen::after,
+.scope--photo::after,
+.kit-readout::after,
+.patch > li::before,
+.bay-jacks > li::before,
+.kit-cta--secondary::before,
+.scope-media .kit-caption::before,
+.scope--photo figcaption::before {
+  display: none !important;
+}
+
+.hero {
+  padding: 0 !important;
+}
+
+.front,
+.tx,
+.bay {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.front-body {
+  gap: 10pt !important;
+}
+
+.name {
+  margin: 0 0 6pt !important;
+  font-size: 24pt !important;
+}
+
+.eyebrow {
+  margin: 0 0 6pt !important;
+}
+
+.summary {
+  margin: 0 0 8pt !important;
+  font-size: 10.5pt !important;
+}
+
+.ident-foot {
+  margin-top: 8pt !important;
+  padding-top: 6pt !important;
+}
+
+.kit-social__link {
+  display: none !important;
+}
+
+.scope--photo {
+  width: 1.6in !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.status {
+  padding: 6pt 8pt !important;
+  border: 1px solid #b8b8b8 !important;
+}
+
+.tx-status {
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  padding: 4pt 8pt !important;
+}
+
+.status-line {
+  grid-template-columns: 6rem minmax(0, 1fr) !important;
+  padding: 2pt 0 !important;
+}
+
+.kit-readout__value {
+  padding: 3pt 6pt !important;
+  font-size: 15pt !important;
+}
+
+.mod {
+  padding-top: 18pt !important;
+}
+
+/* education and certifications print one under the other, in plain block flow */
+.pair,
+.mod--half {
+  display: block !important;
+}
+
+.mod-head {
+  margin: 0 0 8pt !important;
+  break-after: avoid;
+}
+
+.mod-title {
+  font-size: 15pt !important;
+}
+
+.mod-no {
+  padding: 1pt 4pt !important;
+  font-size: 10pt !important;
+}
+
+.note,
+.notes > .note:first-of-type {
+  font-size: 10.5pt !important;
+}
+
+.rack {
+  padding: 0 !important;
+}
+
+/* a role or a featured project is ruled above rather than boxed, so a page break never leaves
+   an empty frame behind; and it flows as blocks, so an unbreakable first part never pushes the
+   whole card (and its section heading's first item) onto the next page */
+.unit,
+.feat {
+  display: block !important;
+  border-width: 1px 0 0 !important;
+  border-radius: 0 !important;
+}
+
+.unit {
+  padding: 10pt 0 6pt !important;
+}
+
+.unit-meta {
+  margin-bottom: 6pt !important;
+}
+
+.feat-screen {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.scope-media img {
+  max-height: 2.4in;
+}
+
+.feat-notes {
+  padding: 8pt 0 6pt !important;
+}
+
+/* a project with no picture prints as its notes alone */
+.row {
+  padding: 8pt 10pt !important;
+}
+
+.row.no-media {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-areas:
+    'body'
+    'side' !important;
+}
+
+.row-media img {
+  max-height: 1.1in;
+}
+
+.unit-hl > li::before,
+.feat-hl > li::before,
+.row-hl > li::before,
+.log-notes > li::before {
+  top: 0.55em !important;
+  width: 4px !important;
+  height: 4px !important;
+  background: #000000 !important;
+}
+
+.patch > li,
+.bay-jacks > li {
+  padding: 1pt 5pt !important;
+}
+
+.bay-row {
+  padding: 6pt 0 !important;
+}
+
+.log {
+  padding: 0 8pt !important;
+}
+
+.log-row {
+  padding: 6pt 0 !important;
+}
+
+.base {
+  margin-top: 18pt !important;
+  border: 0 !important;
+}
+
+.base-inner {
+  padding: 0 !important;
+}
+
+/* small records stay whole; a long role or featured project may run onto the next page between
+   its parts, never through one */
+.row,
+.log-row,
+.bay-row,
+.plate,
+.kit-readout,
+.status,
+.kit-contact,
+.tx-status,
+.unit-meta,
+.unit-title,
+.unit-hl > li,
+.unit-earlier,
+.unit-side,
+.feat-screen,
+.feat-hl > li,
+.feat-foot,
+.scope--photo {
+  break-inside: avoid;
+}
+
+.unit-title,
+.feat-name {
+  break-after: avoid;
+}
+
+.rows-label {
+  break-after: avoid;
+}
+
+/* a module's heading stays with what follows it: an unbreakable heading carries an invisible
+   2.8in tail, so a heading with less room than that under it starts the next page */
+.mod-head,
+.rows-label {
+  display: block !important;
+  break-inside: avoid;
+}
+
+.mod-head > * {
+  display: inline-block !important;
+  margin-right: 8pt !important;
+  vertical-align: middle;
+}
+
+.mod-head > .mod-scale,
+.mod-head > :empty {
+  display: none !important;
+}
+
+.mod-head::after,
+.rows-label::after {
+  content: '' !important;
+  display: block !important;
+  height: 2.8in !important;
+  margin-bottom: -2.8in !important;
+  background: transparent !important;
+}
+
+/* a printed link puts its address on a line of its own, never squeezing the label */
+.kit-link {
+  flex-wrap: wrap !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a.kit-link[href^='http']::after,
+a.cert-link[href^='http']::after,
+a.unit-company[href^='http']::after {
+  content: ' (' attr(href) ')';
+  font-size: 8pt;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  word-break: break-all;
+}
+
+a.kit-link[href^='http']::after {
+  flex-basis: 100%;
+}

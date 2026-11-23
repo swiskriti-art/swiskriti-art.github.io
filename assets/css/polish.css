@@ -1,0 +1,5 @@
+@media (min-width:561px){.log-row{grid-template-columns:11.5rem minmax(0,1fr)}.log-date{white-space:nowrap}}
+@media (max-width:560px){.kit-link{min-height:44px}.mod-head{row-gap:6px}.mod-note{margin-top:-4px}}
+.row-body{gap:10px}
+.feat-hl,.row-hl{margin-top:2px}
+.kit-link{min-height:44px}@media (max-width:560px){.mod-head{row-gap:10px}.mod-note{margin-top:2px}}

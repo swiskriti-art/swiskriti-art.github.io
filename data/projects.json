@@ -1,0 +1,209 @@
+{
+  "projects": [
+    {
+      "name": "R-Shiny Dashboard: U.S. Superstore Sales Analysis",
+      "category": "Dashboards",
+      "description": "An interactive R-Shiny dashboard for analyzing U.S. Superstore sales data from 2014 to 2018. Users can compare sales across business categories and investigate emerging trends.",
+      "highlights": [
+        "Users subset the data by key columns, then view it in data tables and plots or download it.",
+        "Each analysis tab renders its visualization when the Display button is clicked."
+      ],
+      "technologies": [
+        "R",
+        "Shiny",
+        "Data Visualization",
+        "Exploratory Data Analysis"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/Project2"
+      },
+      "image": "assets/images/projects/us-superstore-shiny-dashboard.svg",
+      "featured": true
+    },
+    {
+      "name": "Diabetes Prediction: Logistic Regression",
+      "category": "Statistical modeling",
+      "description": "A logistic regression classification model built in R with tidymodels to examine relationships between dataset variables and predict diabetes occurrence.",
+      "highlights": [
+        "Prepared and explored the data before model development.",
+        "Reviewed classification results to understand variable patterns and the model's predictive output."
+      ],
+      "technologies": [
+        "R",
+        "tidymodels",
+        "Logistic Regression"
+      ],
+      "hero": {
+        "src": "assets/images/projects/diabetes-prediction-hero.jpg",
+        "alt": "Diabetes Prediction: Logistic Regression — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "Data Cleaning & Exploratory Data Analysis",
+      "category": "Data quality",
+      "description": "Cleaning, transformation and exploration of structured datasets to examine distributions, find inconsistencies and understand patterns ahead of statistical analysis.",
+      "highlights": [
+        "Examined distributions and identified inconsistencies in structured datasets.",
+        "Applied data-quality checks to prepare datasets for visualization and further analysis."
+      ],
+      "technologies": [
+        "Data Cleaning",
+        "Exploratory Data Analysis",
+        "Data Quality Checks"
+      ],
+      "hero": {
+        "src": "assets/images/projects/data-cleaning-eda-hero.jpg",
+        "alt": "Data Cleaning & Exploratory Data Analysis — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "timeliner",
+      "category": "Data pipelines",
+      "description": "A Rust super-timeline builder that merges Linux logs, login records, shell histories and bodyfiles into one de-duplicated UTC timeline tagged by YAML rules.",
+      "highlights": [
+        "19 default YAML rules tag brute force, SSH from a new IP, sudo to root and more.",
+        "Normalizes local-time logs and UTC epoch artifacts into one ordered timeline."
+      ],
+      "technologies": [
+        "Rust",
+        "YAML",
+        "JSONL",
+        "CSV",
+        "HTML"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/timeliner"
+      },
+      "image": "assets/images/projects/timeliner.svg",
+      "hero": {
+        "src": "assets/images/projects/timeliner-hero.jpg",
+        "alt": "timeliner — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "evtxkit",
+      "category": "Log parsing",
+      "description": "A from-scratch Rust parser for Windows EVTX event logs with a chunk-parallel JSONL pipeline, CRC verification, damaged-file recovery and Sigma-style field mapping.",
+      "highlights": [
+        "Matches the reference parser on all 4,805 records of 9 public sample logs.",
+        "Parses at 250 MiB/s on one thread and 790 MiB/s on 8 threads."
+      ],
+      "technologies": [
+        "Rust",
+        "JSONL",
+        "Sigma",
+        "CRC32"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/evtxkit"
+      },
+      "image": "assets/images/projects/evtxkit.svg",
+      "hero": {
+        "src": "assets/images/projects/evtxkit-hero.jpg",
+        "alt": "evtxkit — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "binscope",
+      "category": "Static analysis",
+      "description": "A Rust static triage tool for ELF, Mach-O and PE binaries. It reports sections, entropy, imports, tagged strings, capability rules and ssdeep/TLSH fuzzy hashes.",
+      "highlights": [
+        "34 built-in YAML capability rules, each match reporting its evidence.",
+        "ssdeep and TLSH hashes match the reference tools byte for byte."
+      ],
+      "technologies": [
+        "Rust",
+        "YAML",
+        "JSON",
+        "ssdeep",
+        "TLSH"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/binscope"
+      },
+      "image": "assets/images/projects/binscope.svg",
+      "hero": {
+        "src": "assets/images/projects/binscope-hero.jpg",
+        "alt": "binscope — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "driftlens",
+      "category": "Config drift",
+      "description": "A Go library and CLI that classifies drift between Git desired state and live Kubernetes objects. It separates pending Git changes from manual edits, hot-patches, conflicts and server defaults.",
+      "highlights": [
+        "Classifies each object as InSync, OutOfSync, Drifted, Missing or Error.",
+        "Stable JSON output and exit codes for CI pipelines."
+      ],
+      "technologies": [
+        "Go",
+        "Kubernetes",
+        "Git",
+        "YAML",
+        "JSON"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/driftlens"
+      },
+      "image": "assets/images/projects/driftlens.svg",
+      "hero": {
+        "src": "assets/images/projects/driftlens-hero.jpg",
+        "alt": "driftlens — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "paved",
+      "category": "Developer platform",
+      "description": "An internal developer platform core in Go with a Backstage-compatible software catalog and relation graph, a scaffolder with dry-run diffs, and scorecards with team rollups.",
+      "highlights": [
+        "26 diagnostic codes give line-accurate catalog validation.",
+        "Scorecard rules evaluate 34 repository facts, with rollups up the team hierarchy."
+      ],
+      "technologies": [
+        "Go",
+        "YAML",
+        "REST API",
+        "Graphviz",
+        "Mermaid"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/paved"
+      },
+      "image": "assets/images/projects/paved.svg",
+      "hero": {
+        "src": "assets/images/projects/paved-hero.jpg",
+        "alt": "paved — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "stridediff",
+      "category": "Threat modeling",
+      "description": "Architecture-as-code tooling that computes a STRIDE threat delta between two versions of a model. A gate fails when a new or escalated threat has no recorded mitigation.",
+      "highlights": [
+        "Diff reports added, removed and escalated threats between model versions.",
+        "24 tests; the comment embeds a Mermaid data-flow diagram."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Mermaid"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/stridediff"
+      },
+      "image": "assets/images/projects/stridediff.svg",
+      "hero": {
+        "src": "assets/images/projects/stridediff-hero.jpg",
+        "alt": "stridediff — Concept render",
+        "caption": "Concept render"
+      }
+    }
+  ]
+}

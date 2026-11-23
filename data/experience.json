@@ -1,0 +1,52 @@
+{
+  "roles": [
+    {
+      "company": "PNC",
+      "logo": "assets/images/logos/pnc.png",
+      "title": "Data Analyst",
+      "start": "May 2026",
+      "end": "Present",
+      "highlights": [
+        "Analyze customer, account, transaction and operational datasets of 120K+ records with SQL to find business trends, performance changes and reporting gaps.",
+        "Perform data validation, reconciliation and root-cause analysis across source systems and reporting outputs, helping reduce recurring data discrepancies by 21%.",
+        "Improve recurring SQL and BI reporting workflows by simplifying data preparation and report generation, reducing manual reporting effort by 28%."
+      ],
+      "technologies": [
+        "SQL",
+        "Power BI",
+        "Tableau"
+      ]
+    },
+    {
+      "company": "Northern Trust",
+      "logo": "assets/images/logos/northern-trust.png",
+      "title": "Data Analyst",
+      "start": "Jan 2023",
+      "end": "Apr 2024",
+      "highlights": [
+        "Analyzed financial and investment datasets of 175K+ records, examining performance trends, reporting variances and data-quality exceptions.",
+        "Reconciled source-system data against reporting results, investigated mismatches and documented findings, helping reduce unresolved reporting discrepancies by 19%.",
+        "Standardized data preparation, validation and reconciliation procedures with business and technology teams, reducing manual analysis effort by 22%."
+      ],
+      "technologies": [
+        "SQL"
+      ]
+    },
+    {
+      "company": "Liberty Mutual",
+      "logo": "assets/images/logos/liberty-mutual.svg",
+      "title": "Junior Data Analyst",
+      "start": "Oct 2020",
+      "end": "Dec 2022",
+      "highlights": [
+        "Analyzed insurance policy, claims, customer and operational datasets of 85K+ records using SQL and Excel to find performance trends and data inconsistencies.",
+        "Cleaned, transformed and reconciled data from multiple sources, applying validation checks that improved reporting consistency by 16%.",
+        "Prepared recurring business reports and ad hoc analyses covering 9+ policy, claims, service and operational KPIs."
+      ],
+      "technologies": [
+        "SQL",
+        "Excel"
+      ]
+    }
+  ]
+}

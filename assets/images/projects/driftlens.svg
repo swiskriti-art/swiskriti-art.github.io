@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-07 driftlens schematic</title>
+<desc>Desired state and live state feed a per-object engine (normalize, default, prune, compare, classify) that writes a classified report and exit codes.</desc>
+<defs>
+<pattern id="mi" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05"/></pattern>
+<pattern id="ma" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#E7EEF5" stroke-opacity="0.09"/></pattern>
+<marker id="ar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#E7EEF5" fill-opacity="0.7"/></marker>
+<marker id="ak" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#FFB454"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0B0F14"/>
+<rect width="640" height="360" fill="url(#mi)"/>
+<rect width="640" height="360" fill="url(#ma)"/>
+
+<g font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" font-size="9" letter-spacing="0.06em" fill="#E7EEF5">
+<rect x="16" y="16" width="608" height="24" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
+<text x="28" y="32" font-size="10">PN-07 · DRIFTLENS · GIT VS LIVE DRIFT CLASSIFIER</text>
+
+<rect x="16" y="80" width="140" height="64" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6"/>
+<text x="26" y="96">DESIRED STATE</text>
+<text x="26" y="112" fill-opacity="0.7">YAML / JSON</text>
+<text x="26" y="126" fill-opacity="0.7">KUSTOMIZE / STDIN</text>
+
+<rect x="16" y="200" width="140" height="64" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6"/>
+<text x="26" y="216">LIVE STATE</text>
+<text x="26" y="232" fill-opacity="0.7">KUBECONFIG</text>
+<text x="26" y="246" fill-opacity="0.7">OR SNAPSHOT FILE</text>
+
+<rect x="196" y="72" width="256" height="210" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.8"/>
+<text x="224" y="88">PER-OBJECT ENGINE</text>
+
+<rect x="224" y="100" width="200" height="26" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
+<text x="236" y="117">01 NORMALIZE</text>
+<rect x="224" y="134" width="200" height="26" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
+<text x="236" y="151">02 DEFAULT</text>
+<rect x="224" y="168" width="200" height="26" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
+<text x="236" y="185">03 PRUNE IGNORED PATHS</text>
+<rect x="224" y="202" width="200" height="26" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
+<text x="236" y="219"><tspan fill="#FFB454">04</tspan> COMPARE</text>
+<rect x="224" y="236" width="200" height="26" fill="#0B0F14" stroke="#FFB454" stroke-opacity="0.9"/>
+<text x="236" y="253"><tspan fill="#FFB454">05</tspan> CLASSIFY ORIGIN / OWNER</text>
+
+<path d="M324 126V134M324 160V168M324 194V202M324 228V236" stroke="#E7EEF5" stroke-opacity="0.6" fill="none" marker-end="url(#ar)"/>
+
+<rect x="484" y="80" width="140" height="64" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6"/>
+<text x="494" y="96">REPORT</text>
+<text x="494" y="112" fill-opacity="0.7">TEXT / JSON</text>
+<text x="494" y="126" fill-opacity="0.7">driftlens/v1</text>
+
+<rect x="484" y="200" width="140" height="64" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6"/>
+<text x="494" y="216">EXIT CODES</text>
+<text x="494" y="232" fill-opacity="0.7">CI GATE</text>
+<text x="494" y="246" fill-opacity="0.7">--exit-code=drift</text>
+
+<path d="M156 112H196" stroke="#FFB454" fill="none" marker-end="url(#ak)"/>
+<path d="M156 232H196" stroke="#E7EEF5" stroke-opacity="0.6" fill="none" marker-end="url(#ar)"/>
+<path d="M452 112H484" stroke="#FFB454" fill="none" marker-end="url(#ak)"/>
+<path d="M452 232H484" stroke="#E7EEF5" stroke-opacity="0.6" fill="none" marker-end="url(#ar)"/>
+
+<rect x="16" y="304" width="608" height="24" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
+<text x="28" y="320" fill-opacity="0.7">OBJECT STATES  INSYNC · OUTOFSYNC · DRIFTED · MISSING · ERROR</text>
+</g>
+</svg>

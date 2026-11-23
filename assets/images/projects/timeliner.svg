@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 timeliner schematic</title>
+<desc>Linux evidence tree flows through parsers, UTC normalization, cross-artifact dedup and YAML rule tagging, then out as JSONL, CSV, l2tcsv and HTML. Default rule count: 19.</desc>
+<defs>
+<pattern id="g16" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0V16M0 16H16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="g80" width="80" height="80" patternUnits="userSpaceOnUse">
+<rect width="80" height="80" fill="url(#g16)"/>
+<path d="M80 0V80M0 80H80" fill="none" stroke="#E7EEF5" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L8 4L0 8z" fill="#E7EEF5" fill-opacity="0.7"/>
+</marker>
+<marker id="aa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L8 4L0 8z" fill="#FFB454"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="640" height="360" fill="#0B0F14"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#g80)"/>
+
+<g font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.6" fill="#E7EEF5">
+<!-- title strip -->
+<rect x="16" y="16" width="608" height="28" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6" stroke-width="1"/>
+<text x="28" y="34" font-size="11">PN-04 · TIMELINER · LINUX SUPER-TIMELINE BUILDER</text>
+
+<!-- row 1 boxes -->
+<rect x="16" y="80" width="136" height="72" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="100" font-size="10">EVIDENCE TREE</text>
+<text x="28" y="116" font-size="9" fill-opacity="0.7">auth · syslog · wtmp</text>
+<text x="28" y="130" font-size="9" fill-opacity="0.7">journal · bodyfile</text>
+
+<rect x="168" y="80" width="136" height="72" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="100" font-size="10">PARSERS</text>
+<text x="180" y="116" font-size="9" fill-opacity="0.7">syslog · sshd · sudo</text>
+<text x="180" y="130" font-size="9" fill-opacity="0.7">utmp · journal · zsh</text>
+
+<rect x="320" y="80" width="136" height="72" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="100" font-size="10">UTC NORMALIZE</text>
+<text x="332" y="116" font-size="9" fill-opacity="0.7">TZif · POSIX TZ</text>
+<text x="332" y="130" font-size="9" fill-opacity="0.7">year inference</text>
+
+<rect x="472" y="80" width="136" height="72" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="484" y="100" font-size="10">DEDUP</text>
+<text x="484" y="116" font-size="9" fill-opacity="0.7">cross-artifact</text>
+<text x="484" y="130" font-size="9" fill-opacity="0.7">rsyslog/journald</text>
+
+<!-- row 1 arrows -->
+<g stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1" fill="none">
+<line x1="152" y1="116" x2="167" y2="116" marker-end="url(#ah)"/>
+<line x1="304" y1="116" x2="319" y2="116" marker-end="url(#ah)"/>
+</g>
+<line x1="456" y1="116" x2="471" y2="116" stroke="#FFB454" stroke-width="1" marker-end="url(#aa)"/>
+
+<!-- annotation (dashed) -->
+<rect x="16" y="184" width="288" height="56" fill="none" stroke="#E7EEF5" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="28" y="204" font-size="9" fill-opacity="0.7">TZ = EVIDENCE /etc/localtime</text>
+<text x="28" y="222" font-size="9" fill-opacity="0.7">DST OVERLAP: EARLIER INSTANT</text>
+
+<!-- readout -->
+<rect x="320" y="184" width="136" height="56" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="204" font-size="9" fill-opacity="0.7">DEFAULT RULES</text>
+<text x="332" y="228" font-size="22" fill="#FFB454">19</text>
+
+<!-- rules box -->
+<rect x="472" y="184" width="136" height="56" fill="#0B0F14" stroke="#FFB454" stroke-opacity="0.8" stroke-width="1"/>
+<text x="484" y="204" font-size="10">YAML RULE TAGS</text>
+<text x="484" y="220" font-size="9" fill-opacity="0.7">attack.* · tags</text>
+
+<line x1="540" y1="152" x2="540" y2="183" stroke="#FFB454" stroke-width="1" marker-end="url(#aa)"/>
+
+<!-- bus to outputs -->
+<line x1="540" y1="240" x2="540" y2="262" stroke="#FFB454" stroke-width="1"/>
+<line x1="84" y1="262" x2="540" y2="262" stroke="#E7EEF5" stroke-opacity="0.6" stroke-width="1"/>
+<line x1="84" y1="262" x2="84" y2="287" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="236" y1="262" x2="236" y2="287" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="388" y1="262" x2="388" y2="287" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="540" y1="262" x2="540" y2="287" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1" marker-end="url(#ah)"/>
+
+<!-- outputs -->
+<rect x="16" y="288" width="136" height="40" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="306" font-size="10">JSONL</text>
+<text x="28" y="319" font-size="9" fill-opacity="0.7">events · UTC</text>
+
+<rect x="168" y="288" width="136" height="40" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="306" font-size="10">CSV</text>
+<text x="180" y="319" font-size="9" fill-opacity="0.7">spreadsheet rows</text>
+
+<rect x="320" y="288" width="136" height="40" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="306" font-size="10">L2TCSV</text>
+<text x="332" y="319" font-size="9" fill-opacity="0.7">plaso-compatible</text>
+
+<rect x="472" y="288" width="136" height="40" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="484" y="306" font-size="10">HTML</text>
+<text x="484" y="319" font-size="9" fill-opacity="0.7">self-contained report</text>
+
+<text x="16" y="346" font-size="9" fill-opacity="0.5">SCHEMATIC · NOT TO SCALE</text>
+</g>
+</svg>

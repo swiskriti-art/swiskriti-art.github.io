@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swiskriti-art.github.io/sitemap.xml

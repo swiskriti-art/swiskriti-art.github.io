@@ -1,0 +1,32 @@
+{
+  "paragraphs": [
+    "I am a data analyst who works across banking, financial services and insurance, analyzing customer, account, transaction, claims and investment datasets with SQL.",
+    "My day-to-day work is validating and reconciling data between source systems and reports, then tracing mismatches to their root cause. At PNC this has helped reduce recurring data discrepancies by 21%."
+  ],
+  "highlights": [
+    {
+      "label": "Focus",
+      "value": "Data analysis, KPI reporting, BI"
+    },
+    {
+      "label": "Current role",
+      "value": "Data Analyst at PNC"
+    },
+    {
+      "label": "Experience",
+      "value": "3+ years"
+    },
+    {
+      "label": "Base",
+      "value": "New Hill, NC"
+    },
+    {
+      "label": "Core tools",
+      "value": "SQL, Power BI, Tableau, Excel, R"
+    },
+    {
+      "label": "Education",
+      "value": "Graduate Certificate (in progress), NC State"
+    }
+  ]
+}

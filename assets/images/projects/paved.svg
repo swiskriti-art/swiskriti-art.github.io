@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-08 paved: catalog, scorecard and scaffolder architecture</title>
+<desc>Schematic of paved: catalog-info.yaml and repo facts feed the catalog graph, scorecards and the scaffolder, which surface through the CLI and REST API. Readouts show 26 diagnostic codes and 34 repo facts.</desc>
+<defs>
+<style>text{font-family:'IBM Plex Mono',SFMono-Regular,Consolas,monospace;font-size:10px;letter-spacing:.06em;fill:#E7EEF5}.s{font-size:9px;fill-opacity:.7}.n{font-size:22px;fill:#FFB454}.c{text-anchor:middle}</style>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity=".05" stroke-width="1"/></pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#E7EEF5" stroke-opacity=".09" stroke-width="1"/></pattern>
+<marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#E7EEF5" fill-opacity=".6"/></marker>
+<marker id="k" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#FFB454"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0B0F14"/>
+<rect width="640" height="360" fill="url(#minor)"/>
+<rect width="640" height="360" fill="url(#major)"/>
+<rect x="16" y="16" width="608" height="26" fill="none" stroke="#E7EEF5" stroke-opacity=".5"/>
+<text x="28" y="33">PN-08 · PAVED · CATALOG, SCORECARDS, SCAFFOLDER</text>
+
+<g fill="#0B0F14" stroke="#E7EEF5" stroke-opacity=".6">
+<rect x="16" y="72" width="120" height="44"/>
+<rect x="16" y="152" width="120" height="44"/>
+<rect x="16" y="232" width="120" height="44"/>
+<rect x="176" y="72" width="140" height="44" stroke="#FFB454" stroke-opacity="1"/>
+<rect x="176" y="152" width="140" height="44"/>
+<rect x="176" y="232" width="140" height="44"/>
+<rect x="356" y="72" width="120" height="44" stroke="#FFB454" stroke-opacity="1"/>
+<rect x="356" y="152" width="120" height="44"/>
+<rect x="356" y="232" width="120" height="44"/>
+<rect x="504" y="72" width="120" height="204" stroke="#FFB454" stroke-opacity="1"/>
+</g>
+
+<text class="l c" x="76" y="92">CATALOG YAML</text>
+<text class="s c" x="76" y="106">backstage subset</text>
+<text class="c" x="76" y="172">REPO FILES</text>
+<text class="s c" x="76" y="186">CI, README, deps</text>
+<text class="c" x="76" y="252">TEMPLATES</text>
+<text class="s c" x="76" y="266">schema + skeleton</text>
+
+<text class="c" x="246" y="92">CATALOG GRAPH</text>
+<text class="s c" x="246" y="106">validate · SCC</text>
+<text class="c" x="246" y="172">FACTS COLLECTOR</text>
+<text class="s c" x="246" y="186">repo + catalog</text>
+<text class="c" x="246" y="252">SCAFFOLDER</text>
+<text class="s c" x="246" y="266">render · diff</text>
+
+<text class="c" x="416" y="92">QUERIES</text>
+<text class="s c" x="416" y="106">owners, impact</text>
+<text class="c" x="416" y="172">SCORECARDS</text>
+<text class="s c" x="416" y="186">rules · rollups</text>
+<text class="c" x="416" y="252">DRY-RUN PLAN</text>
+<text class="s c" x="416" y="266">diff · path guard</text>
+
+<text class="c" x="564" y="172" style="font-size:11px">CLI + REST</text>
+<text class="s c" x="564" y="188">paved serve</text>
+<text class="s c" x="564" y="204">exit codes for CI</text>
+
+<g fill="none" stroke="#E7EEF5" stroke-opacity=".6" marker-end="url(#a)">
+<line x1="246" y1="116" x2="246" y2="150"/>
+<line x1="136" y1="174" x2="174" y2="174"/>
+<line x1="136" y1="254" x2="174" y2="254"/>
+<line x1="316" y1="174" x2="354" y2="174"/>
+<line x1="316" y1="254" x2="354" y2="254"/>
+<line x1="476" y1="174" x2="502" y2="174"/>
+<line x1="476" y1="254" x2="502" y2="254"/>
+</g>
+<g fill="none" stroke="#FFB454" marker-end="url(#k)">
+<line x1="136" y1="94" x2="174" y2="94"/>
+<line x1="316" y1="94" x2="354" y2="94"/>
+<line x1="476" y1="94" x2="502" y2="94"/>
+</g>
+
+<g fill="#0B0F14" stroke="#E7EEF5" stroke-opacity=".6">
+<rect x="16" y="300" width="140" height="44"/>
+<rect x="176" y="300" width="140" height="44"/>
+<rect x="356" y="300" width="268" height="44"/>
+</g>
+<text class="n" x="28" y="332">26</text>
+<text x="70" y="322">DIAGNOSTIC</text>
+<text x="70" y="334">CODES</text>
+<text class="n" x="188" y="332">34</text>
+<text x="230" y="322">REPO</text>
+<text x="230" y="334">FACTS</text>
+<line x1="372" y1="322" x2="400" y2="322" stroke="#FFB454"/>
+<text x="410" y="325" style="font-size:9px">KEY PATH</text>
+<line x1="372" y1="337" x2="400" y2="337" stroke="#E7EEF5" stroke-opacity=".6"/>
+<text x="410" y="340" style="font-size:9px">SUPPORTING FLOW</text>
+</svg>

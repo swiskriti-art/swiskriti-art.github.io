@@ -1,0 +1,403 @@
+/*
+ * SlateGit template kit v1: structural styles for what kit.js renders.
+ *
+ * Every colour, radius, border, shadow and font comes from the ten --kit-* tokens, which a
+ * template sets in its own :root. Every selector is wrapped in :where(), so it has no
+ * specificity and any rule in the template's own stylesheet overrides it.
+ */
+
+:where(:root) {
+  --kit-bg: Canvas;
+  --kit-ink: CanvasText;
+  --kit-accent: LinkText;
+  --kit-muted: GrayText;
+  --kit-radius: 0.5rem;
+  --kit-border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  --kit-shadow: 0 1px 3px color-mix(in srgb, CanvasText 14%, transparent);
+  --kit-font-body: system-ui, sans-serif;
+  --kit-font-display: var(--kit-font-body);
+  --kit-font-mono: ui-monospace, monospace;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* The sprite is a hidden library of <symbol>s; icons are 1em and take the text colour. */
+:where(.kit-sprite) {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+:where(.kit-icon) {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  vertical-align: -0.125em;
+}
+
+/* Kit-rendered text never overflows a narrow screen, however long a name or URL is. */
+:where([data-kit-text], [data-kit-field], [data-kit-each] > *, [class^='kit-'], [class*=' kit-']) {
+  overflow-wrap: anywhere;
+}
+
+/* ---- lists and slots ---- */
+
+:where(ul, ol):where([data-kit-list], [data-kit-each], [data-kit]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where([data-kit-list][data-kit-count='0']) {
+  display: none;
+}
+
+:where([data-kit-list='projects'], [data-kit-list='featured']) {
+  display: grid;
+  gap: 1.5rem;
+}
+
+:where([data-kit-list='projects']) {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+:where([data-kit-list='roles'], [data-kit-list='entries'], [data-kit-list='items']) {
+  display: grid;
+  gap: 1.5rem;
+}
+
+:where([data-kit-list='groups']) {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+}
+
+:where(.kit-tags) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+:where(.kit-tags > li) {
+  padding: 0.125rem 0.5rem;
+  border: var(--kit-border);
+  border-radius: var(--kit-radius);
+  font-family: var(--kit-font-mono);
+  font-size: 0.8125em;
+}
+
+:where(.kit-meta, .kit-caption, .kit-dates, .kit-readout__label, .kit-highlight > :first-child) {
+  color: var(--kit-muted);
+  font-size: 0.875em;
+}
+
+:where(.kit-meta) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
+  margin: 0.25rem 0;
+  font-family: var(--kit-font-mono);
+}
+
+/* ---- hero ---- */
+
+:where([data-kit='hero-photo']) {
+  margin: 0;
+}
+
+:where([data-kit='hero-photo'] img) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--kit-radius);
+  box-shadow: var(--kit-shadow);
+}
+
+:where([data-kit='readouts']) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+  gap: 1rem;
+}
+
+:where(.kit-readout) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+:where(.kit-readout__value) {
+  color: var(--kit-accent);
+  font-family: var(--kit-font-display);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+:where([data-kit='ctas'], [data-kit='social'], [data-kit='nav']) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+:where(.kit-cta) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1.25em;
+  border: var(--kit-border);
+  border-radius: var(--kit-radius);
+  color: var(--kit-ink);
+  font-family: var(--kit-font-body);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+:where(.kit-cta--primary) {
+  border-color: transparent;
+  background: var(--kit-accent);
+  color: var(--kit-bg);
+}
+
+:where(.kit-social__link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: var(--kit-border);
+  border-radius: var(--kit-radius);
+  color: var(--kit-ink);
+}
+
+/* the social label names the link for screen readers; the icon is what shows */
+:where(.kit-social__label) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+:where(.kit-nav__link, .kit-link, .kit-contact) {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* company and certification links set from data-kit-href */
+:where(a[data-kit-href]) {
+  color: inherit;
+  text-decoration-color: var(--kit-accent);
+  text-underline-offset: 0.2em;
+}
+
+:where(
+  .kit-cta,
+  .kit-social__link,
+  .kit-nav__link,
+  .kit-link,
+  .kit-contact,
+  .kit-cert a
+):focus-visible {
+  outline: 2px solid var(--kit-accent);
+  outline-offset: 3px;
+}
+
+/* ---- experience and education ---- */
+
+:where(.kit-role) {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  column-gap: 1rem;
+}
+
+:where(.kit-role > *) {
+  grid-column: 2;
+  margin: 0;
+}
+
+:where(.kit-role > [data-kit='role-logo']) {
+  grid-column: 1;
+  grid-row: 1 / span 9;
+}
+
+:where(.kit-role[data-kit-logo='0']) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+:where(.kit-role[data-kit-logo='0'] > *) {
+  grid-column: 1;
+}
+
+:where([data-kit='role-logo'] img) {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.375rem;
+  border: var(--kit-border);
+  border-radius: var(--kit-radius);
+  background: var(--kit-bg);
+  object-fit: contain;
+}
+
+:where(.kit-role h3, .kit-entry h3, .kit-project h3, .kit-group h3) {
+  margin: 0;
+  font-family: var(--kit-font-display);
+  line-height: 1.25;
+}
+
+:where(.kit-role [data-kit-each='highlights'], .kit-project [data-kit-each='highlights']) {
+  margin: 0.5rem 0;
+  padding-inline-start: 1.25em;
+  list-style: disc;
+}
+
+:where(.kit-role > .kit-tags, .kit-project > .kit-tags) {
+  margin-block: 0.5rem;
+}
+
+:where([data-kit='role-earlier']) {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding-inline-start: 0.75rem;
+  border-inline-start: var(--kit-border);
+}
+
+:where(.kit-earlier) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
+}
+
+:where(.kit-entry > *, .kit-group > *) {
+  margin: 0 0 0.25rem;
+}
+
+/* ---- projects ---- */
+
+:where(.kit-project) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  border: var(--kit-border);
+  border-radius: var(--kit-radius);
+  box-shadow: var(--kit-shadow);
+}
+
+:where(.kit-project > :not([data-kit='project-media'])) {
+  margin: 0;
+  padding-inline: 1rem;
+}
+
+:where([data-kit='project-media']) {
+  margin: 0;
+}
+
+:where([data-kit='project-media'] img) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* a schematic is a diagram: show all of it */
+:where(.kit-media--schematic img) {
+  object-fit: contain;
+  background: var(--kit-bg);
+}
+
+:where([data-kit='project-media'] .kit-caption) {
+  display: block;
+  padding: 0.375rem 1rem 0;
+}
+
+:where([data-kit='project-links']) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+:where(.kit-link, .kit-contact) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+:where(.kit-project > [data-kit-field='category']) {
+  color: var(--kit-accent);
+  font-family: var(--kit-font-mono);
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (min-width: 48rem) {
+  :where(.kit-project--featured.kit-project--split) {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    align-content: start;
+    column-gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  :where(.kit-project--split > [data-kit='project-media']) {
+    grid-row: 1 / span 9;
+  }
+
+  :where(.kit-project--split > :not([data-kit='project-media'])) {
+    grid-column: 2;
+    padding-inline: 0 1.5rem;
+  }
+
+  :where(.kit-project--split > :nth-child(2)) {
+    padding-top: 1.5rem;
+  }
+}
+
+:where(.kit-project--featured.kit-project--stack [data-kit='project-media'] img) {
+  aspect-ratio: 21 / 9;
+}
+
+/* ---- contact ---- */
+
+:where([data-kit='contact-list']) {
+  display: grid;
+  gap: 0.75rem;
+}
+
+:where(.kit-cert) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
+}
+
+:where(.kit-cert > :not(a)) {
+  color: var(--kit-muted);
+}
+
+/* Motion is the template's business, but never when the visitor asked for less of it. Transitions are
+   off outright (0s duration and delay): a 0.01ms one is still a live transition, so a style a template
+   sets and then measures (its hero name's fit) reads back the old value, and the fit flips on resize. */
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
