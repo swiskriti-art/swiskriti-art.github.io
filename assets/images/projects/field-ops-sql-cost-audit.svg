@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-05 field-ops-sql-cost-audit dbt pipeline</title>
+<desc>Seeded raw field-operations tables flow through dbt staging, intermediate and mart layers into cost-to-serve, SLA breach, technician utilization and data-quality exception views.</desc>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5}
+.s{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5;fill-opacity:.7}
+.h{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#E7EEF5}
+.a{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#FFB454}
+</style>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#E7EEF5" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#E7EEF5" fill-opacity="0.8"/>
+</marker>
+<marker id="ahA" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#FFB454"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#0B0F14"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<!-- title strip -->
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#E7EEF5" stroke-opacity="0.6" stroke-width="1"/>
+<text x="28" y="32" class="h">PN-05 · FIELD-OPS-SQL-COST-AUDIT · COST-TO-SERVE AND SLA</text>
+
+<!-- row 1: dbt layers -->
+<rect x="16" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="92" class="t">SEEDED DATA</text>
+<text x="28" y="110" class="s">7 raw tables</text>
+<text x="28" y="124" class="s">dupes · orphans</text>
+
+<rect x="168" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="92" class="t">STAGING</text>
+<text x="180" y="110" class="s">dedupe timesheets</text>
+<text x="180" y="124" class="s">normalise raw</text>
+
+<rect x="320" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="92" class="t">INTERMEDIATE</text>
+<text x="332" y="110" class="a">recursive route CTE</text>
+<text x="332" y="124" class="s">cost allocation</text>
+
+<rect x="472" y="72" width="136" height="72" fill="none" stroke="#FFB454" stroke-width="1"/>
+<text x="484" y="92" class="a">MARTS</text>
+<text x="484" y="110" class="s">fct_* · dim_* · rpt_*</text>
+<text x="484" y="124" class="s">DuckDB | Postgres</text>
+
+<g stroke="#E7EEF5" stroke-opacity="0.8" stroke-width="1">
+<line x1="152" y1="108" x2="166" y2="108" marker-end="url(#ah)"/>
+<line x1="304" y1="108" x2="318" y2="108" marker-end="url(#ah)"/>
+<line x1="456" y1="108" x2="470" y2="108" marker-end="url(#ah)"/>
+</g>
+
+<!-- bus to reporting views -->
+<g stroke="#FFB454" stroke-width="1">
+<line x1="540" y1="144" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="84" y2="194" marker-end="url(#ahA)"/>
+<line x1="236" y1="172" x2="236" y2="194" marker-end="url(#ahA)"/>
+<line x1="388" y1="172" x2="388" y2="194" marker-end="url(#ahA)"/>
+<line x1="540" y1="172" x2="540" y2="194" marker-end="url(#ahA)"/>
+</g>
+
+<!-- row 2: reporting views -->
+<rect x="16" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="216" class="t">COST-TO-SERVE</text>
+<text x="28" y="234" class="s">labor + net parts</text>
+<text x="28" y="248" class="s">+ travel, floor 0</text>
+
+<rect x="168" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="216" class="t">SLA BREACHES</text>
+<text x="180" y="234" class="s">region · priority</text>
+<text x="180" y="248" class="s">monthly summary</text>
+
+<rect x="320" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="216" class="t">UTILIZATION</text>
+<text x="332" y="234" class="s">weekly per tech</text>
+<text x="332" y="248" class="s">4-wk rolling avg</text>
+
+<rect x="472" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="484" y="216" class="t">DQ EXCEPTIONS</text>
+<text x="484" y="234" class="s">unresolved techs</text>
+<text x="484" y="248" class="s">kept visible</text>
+
+<!-- footer -->
+<rect x="16" y="296" width="608" height="36" fill="none" stroke="#E7EEF5" stroke-opacity="0.4" stroke-width="1"/>
+<text x="28" y="318" class="s">DBT TESTS · NO NEGATIVE COSTS · NO ORPHANED JOBS · NO ROUTE CYCLES</text>
+</svg>

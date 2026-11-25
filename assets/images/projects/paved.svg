@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-08 paved: catalog, scorecard and scaffolder architecture</title>
+<title>PN-13 paved: catalog, scorecard and scaffolder architecture</title>
 <desc>Schematic of paved: catalog-info.yaml and repo facts feed the catalog graph, scorecards and the scaffolder, which surface through the CLI and REST API. Readouts show 26 diagnostic codes and 34 repo facts.</desc>
 <defs>
 <style>text{font-family:'IBM Plex Mono',SFMono-Regular,Consolas,monospace;font-size:10px;letter-spacing:.06em;fill:#E7EEF5}.s{font-size:9px;fill-opacity:.7}.n{font-size:22px;fill:#FFB454}.c{text-anchor:middle}</style>
@@ -12,7 +12,7 @@
 <rect width="640" height="360" fill="url(#minor)"/>
 <rect width="640" height="360" fill="url(#major)"/>
 <rect x="16" y="16" width="608" height="26" fill="none" stroke="#E7EEF5" stroke-opacity=".5"/>
-<text x="28" y="33">PN-08 · PAVED · CATALOG, SCORECARDS, SCAFFOLDER</text>
+<text x="28" y="33">PN-13 · PAVED · CATALOG, SCORECARDS, SCAFFOLDER</text>
 
 <g fill="#0B0F14" stroke="#E7EEF5" stroke-opacity=".6">
 <rect x="16" y="72" width="120" height="44"/>

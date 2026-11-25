@@ -59,6 +59,109 @@
       }
     },
     {
+      "name": "retail-margin-cockpit",
+      "category": "Business intelligence",
+      "description": "A governed margin and inventory model for retail and DTC teams: a tested dbt star schema, a DAX measure library and a Power BI semantic model with row-level security, built on reproducible synthetic POS, Shopify and inventory data.",
+      "highlights": [
+        "Six dbt marts covered by 56 generic tests; the same seed produces the same data every run.",
+        "DAX measures for gross margin %, sell-through, inventory turns, stockout rate, weeks of supply and YoY / MoM / YTD.",
+        "Regional Manager and HQ Analyst RLS roles in Power BI, with the same boundary enforced in Postgres."
+      ],
+      "technologies": [
+        "SQL",
+        "dbt",
+        "Power BI",
+        "DAX",
+        "DuckDB",
+        "PostgreSQL"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/retail-margin-cockpit"
+      },
+      "image": "assets/images/projects/retail-margin-cockpit.svg"
+    },
+    {
+      "name": "field-ops-sql-cost-audit",
+      "category": "SQL analytics",
+      "description": "A dbt and SQL project that reconciles messy field-operations data into a true cost-to-serve per job and shows where SLA breaches concentrate.",
+      "highlights": [
+        "Staging models dedupe double-logged timesheets; a recursive CTE rebuilds each route's stop order.",
+        "Weekly technician utilization with a trailing 4-week rolling average, plus SLA breach summaries by region, priority and month.",
+        "A data-quality exceptions view keeps excluded jobs visible instead of silently dropping them."
+      ],
+      "technologies": [
+        "SQL",
+        "dbt",
+        "DuckDB",
+        "PostgreSQL",
+        "Tableau"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/field-ops-sql-cost-audit"
+      },
+      "image": "assets/images/projects/field-ops-sql-cost-audit.svg"
+    },
+    {
+      "name": "metricregistry",
+      "category": "KPI governance",
+      "description": "Executable, versioned KPI definitions with a divergence monitor that flags when metrics claiming to measure the same thing disagree.",
+      "highlights": [
+        "Each definition is its SQL, so it runs, produces a value and is compared with every other definition of the same subject.",
+        "In the demo, finance (13,990) and the registrar (13,570) disagree on enrolled students by 3.00%, against a 0.50% tolerance.",
+        "A change log shows how far a number moved because its definition changed."
+      ],
+      "technologies": [
+        "Python",
+        "SQL",
+        "SQLite"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/metricregistry"
+      },
+      "image": "assets/images/projects/metricregistry.svg"
+    },
+    {
+      "name": "lineagelens",
+      "category": "Data lineage",
+      "description": "Column-level SQL lineage and impact analysis: given a column you want to change, it lists the downstream columns and dashboards that read it.",
+      "highlights": [
+        "Resolves CTE chains, joins, UNIONs and SELECT * against a table catalog.",
+        "In the demo, ten models touch orders, but only four of five dashboards read orders.discount_pct."
+      ],
+      "technologies": [
+        "Python",
+        "SQL",
+        "Mermaid",
+        "JavaScript"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/lineagelens"
+      },
+      "image": "assets/images/projects/lineagelens.svg"
+    },
+    {
+      "name": "streamguard-cdc",
+      "category": "Data pipelines",
+      "description": "A change-data-capture pipeline from Postgres through Debezium and a Kafka-compatible broker to a Python stream processor and ClickHouse.",
+      "highlights": [
+        "Idempotent processing keyed on table, primary key and WAL LSN; schema changes are reconciled instead of crashing.",
+        "Revenue per store per minute in tumbling windows, with malformed records dead-lettered.",
+        "Prometheus metrics and a provisioned Grafana lag and throughput dashboard."
+      ],
+      "technologies": [
+        "Python",
+        "PostgreSQL",
+        "Debezium",
+        "Kafka",
+        "ClickHouse",
+        "Grafana"
+      ],
+      "links": {
+        "source": "https://github.com/swiskriti-art/streamguard-cdc"
+      },
+      "image": "assets/images/projects/streamguard-cdc.svg"
+    },
+    {
       "name": "timeliner",
       "category": "Data pipelines",
       "description": "A Rust super-timeline builder that merges Linux logs, login records, shell histories and bodyfiles into one de-duplicated UTC timeline tagged by YAML rules.",

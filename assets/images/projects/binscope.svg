@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-06 binscope static triage pipeline</title>
+<title>PN-11 binscope static triage pipeline</title>
 <desc>Blueprint schematic: samples and CLI feed format parsing, content passes and anomaly detection, then the YAML capability rule engine, triage report, terminal/JSON output and compare/cluster.</desc>
 <style>
 .t{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;font-size:10px;letter-spacing:0.06em;fill:#E7EEF5;text-anchor:middle}
@@ -27,7 +27,7 @@
 <rect width="640" height="360" fill="url(#gm)"/>
 <rect width="640" height="360" fill="url(#gM)"/>
 <rect x="16" y="16" width="608" height="24" class="w"/>
-<text x="28" y="32" class="h">PN-06 · BINSCOPE · STATIC TRIAGE PIPELINE</text>
+<text x="28" y="32" class="h">PN-11 · BINSCOPE · STATIC TRIAGE PIPELINE</text>
 
 <g>
 <rect x="24" y="80" width="100" height="40" class="b"/>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-07 lineagelens column-level lineage</title>
+<desc>Model SQL is parsed into clauses and sources, resolved through CTEs, UNION branches and catalog-expanded stars into a lineage graph, which answers column impact, dashboard impact and table-level questions and renders Mermaid.</desc>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5}
+.s{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5;fill-opacity:.7}
+.h{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#E7EEF5}
+.a{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#FFB454}
+</style>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#E7EEF5" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#E7EEF5" fill-opacity="0.8"/>
+</marker>
+<marker id="ahA" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#FFB454"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#0B0F14"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<!-- title strip -->
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#E7EEF5" stroke-opacity="0.6" stroke-width="1"/>
+<text x="28" y="32" class="h">PN-07 · LINEAGELENS · COLUMN-LEVEL SQL LINEAGE</text>
+
+<!-- row 1 -->
+<rect x="16" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="92" class="t">MODEL SQL</text>
+<text x="28" y="110" class="s">CTEs · joins</text>
+<text x="28" y="124" class="s">UNION · SELECT *</text>
+
+<rect x="168" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="92" class="t">PARSER</text>
+<text x="180" y="110" class="s">clauses · sources</text>
+<text x="180" y="124" class="s">select items</text>
+
+<rect x="320" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="92" class="t">RESOLVE</text>
+<text x="332" y="110" class="s">CTEs → main → UNION</text>
+<text x="332" y="124" class="a">* via catalog</text>
+
+<rect x="472" y="72" width="136" height="72" fill="none" stroke="#FFB454" stroke-width="1"/>
+<text x="484" y="92" class="a">LINEAGE GRAPH</text>
+<text x="484" y="110" class="s">column edges</text>
+<text x="484" y="124" class="s">+ dashboards</text>
+
+<g stroke="#E7EEF5" stroke-opacity="0.8" stroke-width="1">
+<line x1="152" y1="108" x2="166" y2="108" marker-end="url(#ah)"/>
+<line x1="304" y1="108" x2="318" y2="108" marker-end="url(#ah)"/>
+<line x1="456" y1="108" x2="470" y2="108" marker-end="url(#ah)"/>
+</g>
+
+<!-- bus to queries -->
+<g stroke="#FFB454" stroke-width="1">
+<line x1="540" y1="144" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="84" y2="194" marker-end="url(#ahA)"/>
+<line x1="236" y1="172" x2="236" y2="194" marker-end="url(#ahA)"/>
+<line x1="388" y1="172" x2="388" y2="194" marker-end="url(#ahA)"/>
+<line x1="540" y1="172" x2="540" y2="194" marker-end="url(#ahA)"/>
+</g>
+
+<!-- row 2: questions it answers -->
+<rect x="16" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="216" class="t">IMPACT_OF</text>
+<text x="28" y="234" class="s">downstream</text>
+<text x="28" y="248" class="s">(model, column)</text>
+
+<rect x="168" y="196" width="136" height="72" fill="none" stroke="#FFB454" stroke-width="1"/>
+<text x="180" y="216" class="a">DASHBOARDS</text>
+<text x="180" y="234" class="s">4 of 5 read</text>
+<text x="180" y="248" class="s">discount_pct</text>
+
+<rect x="320" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="216" class="t">TABLE-LEVEL</text>
+<text x="332" y="234" class="s">10 models touch</text>
+<text x="332" y="248" class="s">orders</text>
+
+<rect x="472" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="484" y="216" class="t">MERMAID</text>
+<text x="484" y="234" class="s">one column's</text>
+<text x="484" y="248" class="s">downstream graph</text>
+
+<!-- footer -->
+<rect x="16" y="296" width="608" height="36" fill="none" stroke="#E7EEF5" stroke-opacity="0.4" stroke-width="1"/>
+<text x="28" y="318" class="s">UNKNOWN STARS REPORTED AS UNRESOLVED · PYTHON 3.11 · STANDARD LIBRARY ONLY</text>
+</svg>

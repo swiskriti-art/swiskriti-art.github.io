@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-09 stridediff: STRIDE threat delta gate</title>
+<title>PN-14 stridediff: STRIDE threat delta gate</title>
 <desc>Model feeds STRIDE rules, then a base/head diff, then a gate that is also fed by recorded mitigations. The gate output renders a pull-request comment. Key path in amber.</desc>
 <defs>
 <style>text{font-family:'IBM Plex Mono','SFMono-Regular',Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#E7EEF5}</style>
@@ -12,7 +12,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 <rect x="16" y="16" width="608" height="28" fill="none" stroke="#E7EEF5" stroke-opacity="0.5"/>
-<text x="28" y="34" font-size="11">PN-09 · STRIDEDIFF · STRIDE THREAT DELTA GATE</text>
+<text x="28" y="34" font-size="11">PN-14 · STRIDEDIFF · STRIDE THREAT DELTA GATE</text>
 
 <rect x="16" y="76" width="160" height="60" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6"/>
 <text x="28" y="96" font-size="11">MODEL</text>

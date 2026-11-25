@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-07 driftlens schematic</title>
+<title>PN-12 driftlens schematic</title>
 <desc>Desired state and live state feed a per-object engine (normalize, default, prune, compare, classify) that writes a classified report and exit codes.</desc>
 <defs>
 <pattern id="mi" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05"/></pattern>
@@ -13,7 +13,7 @@
 
 <g font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace" font-size="9" letter-spacing="0.06em" fill="#E7EEF5">
 <rect x="16" y="16" width="608" height="24" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.5"/>
-<text x="28" y="32" font-size="10">PN-07 · DRIFTLENS · GIT VS LIVE DRIFT CLASSIFIER</text>
+<text x="28" y="32" font-size="10">PN-12 · DRIFTLENS · GIT VS LIVE DRIFT CLASSIFIER</text>
 
 <rect x="16" y="80" width="140" height="64" fill="#0B0F14" stroke="#E7EEF5" stroke-opacity="0.6"/>
 <text x="26" y="96">DESIRED STATE</text>

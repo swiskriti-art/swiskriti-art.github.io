@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-06 metricregistry divergence monitor</title>
+<desc>Versioned metric definitions live in an immutable registry; each one's SQL is evaluated on SQLite, and a monitor compares definitions that share a subject, reporting alerts, agreements, definition changes and column lineage.</desc>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5}
+.s{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5;fill-opacity:.7}
+.h{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#E7EEF5}
+.a{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#FFB454}
+</style>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#E7EEF5" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#E7EEF5" fill-opacity="0.8"/>
+</marker>
+<marker id="ahA" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#FFB454"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#0B0F14"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<!-- title strip -->
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#E7EEF5" stroke-opacity="0.6" stroke-width="1"/>
+<text x="28" y="32" class="h">PN-06 · METRICREGISTRY · VERSIONED KPI DEFINITIONS</text>
+
+<!-- row 1 -->
+<rect x="16" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="92" class="t">DEFINITION</text>
+<text x="28" y="110" class="s">SQL · grain · owner</text>
+<text x="28" y="124" class="s">name@version</text>
+
+<rect x="168" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="92" class="t">REGISTRY</text>
+<text x="180" y="110" class="s">immutable versions</text>
+<text x="180" y="124" class="s">amend = new version</text>
+
+<rect x="320" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="92" class="t">EVALUATE</text>
+<text x="332" y="110" class="s">SQL on SQLite</text>
+<text x="332" y="124" class="s">one value each</text>
+
+<rect x="472" y="72" width="136" height="72" fill="none" stroke="#FFB454" stroke-width="1"/>
+<text x="484" y="92" class="a">MONITOR</text>
+<text x="484" y="110" class="s">pairs by subject</text>
+<text x="484" y="124" class="s">worst gap first</text>
+
+<g stroke="#E7EEF5" stroke-opacity="0.8" stroke-width="1">
+<line x1="152" y1="108" x2="166" y2="108" marker-end="url(#ah)"/>
+<line x1="304" y1="108" x2="318" y2="108" marker-end="url(#ah)"/>
+<line x1="456" y1="108" x2="470" y2="108" marker-end="url(#ah)"/>
+</g>
+
+<!-- bus to report -->
+<g stroke="#FFB454" stroke-width="1">
+<line x1="540" y1="144" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="84" y2="194" marker-end="url(#ahA)"/>
+<line x1="236" y1="172" x2="236" y2="194" marker-end="url(#ahA)"/>
+<line x1="388" y1="172" x2="388" y2="194" marker-end="url(#ahA)"/>
+<line x1="540" y1="172" x2="540" y2="194" marker-end="url(#ahA)"/>
+</g>
+
+<!-- row 2: demo report -->
+<rect x="16" y="196" width="136" height="72" fill="none" stroke="#FFB454" stroke-width="1"/>
+<text x="28" y="216" class="a">[ALERT] 3.00%</text>
+<text x="28" y="234" class="s">finance 13,990</text>
+<text x="28" y="248" class="s">registrar 13,570</text>
+
+<rect x="168" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="216" class="t">[OK] 0.00%</text>
+<text x="180" y="234" class="s">applications</text>
+<text x="180" y="248" class="s">17,100 = 17,100</text>
+
+<rect x="320" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="216" class="t">CHANGE LOG</text>
+<text x="332" y="234" class="s">finance v1 → v2</text>
+<text x="332" y="248" class="s">14,560 → 14,300</text>
+
+<rect x="472" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="484" y="216" class="t">LINEAGE</text>
+<text x="484" y="234" class="s">columns read</text>
+<text x="484" y="248" class="s">per definition</text>
+
+<!-- footer -->
+<rect x="16" y="296" width="608" height="36" fill="none" stroke="#E7EEF5" stroke-opacity="0.4" stroke-width="1"/>
+<text x="28" y="318" class="s">TOLERANCE 0.50% · TIGHTER OF TWO DEFINITIONS WINS · STANDARD LIBRARY ONLY</text>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 retail-margin-cockpit governed margin model</title>
+<desc>A seeded generator feeds dbt staging and a tested star schema; a DAX measure library sits on top, and a Power BI semantic model applies Regional Manager and HQ Analyst row-level security, mirrored by native Postgres RLS.</desc>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5}
+.s{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#E7EEF5;fill-opacity:.7}
+.h{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#E7EEF5}
+.a{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#FFB454}
+</style>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#E7EEF5" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#E7EEF5" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#E7EEF5" fill-opacity="0.8"/>
+</marker>
+<marker id="ahA" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L6 3L0 6z" fill="#FFB454"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#0B0F14"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<!-- title strip -->
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#E7EEF5" stroke-opacity="0.6" stroke-width="1"/>
+<text x="28" y="32" class="h">PN-04 · RETAIL-MARGIN-COCKPIT · GOVERNED MARGIN MODEL</text>
+
+<!-- row 1: warehouse -->
+<rect x="16" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="92" class="t">GENERATOR</text>
+<text x="28" y="110" class="s">2 yrs · 32 SKUs</text>
+<text x="28" y="124" class="s">5 channels · seeded</text>
+
+<rect x="168" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="92" class="t">DBT STAGING</text>
+<text x="180" y="110" class="s">stg_* views</text>
+<text x="180" y="124" class="s">clean · conform IDs</text>
+
+<rect x="320" y="72" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="92" class="t">STAR SCHEMA</text>
+<text x="332" y="110" class="s">2 facts · 4 dims</text>
+<text x="332" y="124" class="a">56 dbt tests</text>
+
+<rect x="472" y="72" width="136" height="72" fill="none" stroke="#FFB454" stroke-width="1"/>
+<text x="484" y="92" class="a">MEASURES.DAX</text>
+<text x="484" y="110" class="s">GM% · sell-through</text>
+<text x="484" y="124" class="s">turns · YoY · YTD</text>
+
+<g stroke="#E7EEF5" stroke-opacity="0.8" stroke-width="1">
+<line x1="152" y1="108" x2="166" y2="108" marker-end="url(#ah)"/>
+<line x1="304" y1="108" x2="318" y2="108" marker-end="url(#ah)"/>
+<line x1="456" y1="108" x2="470" y2="108" marker-end="url(#ah)"/>
+</g>
+
+<!-- bus to governed layer -->
+<g stroke="#FFB454" stroke-width="1">
+<line x1="540" y1="144" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="540" y2="172"/>
+<line x1="84" y1="172" x2="84" y2="194" marker-end="url(#ahA)"/>
+<line x1="236" y1="172" x2="236" y2="194" marker-end="url(#ahA)"/>
+<line x1="388" y1="172" x2="388" y2="194" marker-end="url(#ahA)"/>
+<line x1="540" y1="172" x2="540" y2="194" marker-end="url(#ahA)"/>
+</g>
+
+<!-- row 2: governed access -->
+<rect x="16" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="28" y="216" class="t">MODEL.BIM</text>
+<text x="28" y="234" class="s">TMSL semantic</text>
+<text x="28" y="248" class="s">measures generated</text>
+
+<rect x="168" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="180" y="216" class="t">RLS · REGIONAL</text>
+<text x="180" y="234" class="s">dynamic, scoped by</text>
+<text x="180" y="248" class="s">user-region map</text>
+
+<rect x="320" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="332" y="216" class="t">RLS · HQ ANALYST</text>
+<text x="332" y="234" class="s">unrestricted</text>
+<text x="332" y="248" class="s">company-wide view</text>
+
+<rect x="472" y="196" width="136" height="72" fill="none" stroke="#E7EEF5" stroke-opacity="0.7" stroke-width="1"/>
+<text x="484" y="216" class="t">POSTGRES RLS</text>
+<text x="484" y="234" class="s">same boundary for</text>
+<text x="484" y="248" class="s">SQL-only clients</text>
+
+<!-- footer -->
+<rect x="16" y="296" width="608" height="36" fill="none" stroke="#E7EEF5" stroke-opacity="0.4" stroke-width="1"/>
+<text x="28" y="318" class="s">DUCKDB BY DEFAULT · POSTGRES VIA --TARGET · SAME SEED, SAME BYTES</text>
+</svg>

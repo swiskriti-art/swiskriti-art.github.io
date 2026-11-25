@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-05 evtxkit chunk-parallel EVTX decode pipeline</title>
+<title>PN-10 evtxkit chunk-parallel EVTX decode pipeline</title>
 <desc>Blueprint schematic: EVTX file to 64 KiB slots, per-chunk parallel workers (CRC32, framing, BinXML, templates, render), ordered sink, output, and three key readouts.</desc>
 <style>
 text{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#E7EEF5;text-transform:uppercase}
@@ -30,7 +30,7 @@ text{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 
 <rect x="16" y="16" width="608" height="22" class="box" stroke-opacity="0.5"/>
-<text x="28" y="31">PN-05 · EVTXKIT · CHUNK-PARALLEL EVTX DECODER</text>
+<text x="28" y="31">PN-10 · EVTXKIT · CHUNK-PARALLEL EVTX DECODER</text>
 
 <rect x="16" y="150" width="100" height="50" class="box"/>
 <text x="66" y="179" text-anchor="middle">EVTX FILE</text>
